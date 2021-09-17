@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:quiz_app/constants.dart';
+import 'package:quiz_app/models/Questions.dart';
 import 'package:quiz_app/screens/quiz/components/progress_bar.dart';
+import 'package:quiz_app/screens/quiz/components/question_card.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -21,8 +24,36 @@ class Body extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ProgressBar()
+                ProgressBar(),
+                SizedBox(
+                  height: kDefaultPadding,
+                ),
+                Text.rich(
+                  TextSpan(
+                      text: "Questão 1",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline4
+                          .copyWith(color: kSecondaryColor),
+                      children: [
+                        TextSpan(
+                            text: "/10",
+                            style: Theme.of(context)
+                                .textTheme
+                                .headline5
+                                .copyWith(color: kSecondaryColor))
+                      ]),
+                ),
+                Divider(
+                  thickness: 1.5,
+                ),
+                SizedBox(
+                  height: kDefaultPadding,
+                ),
+                Expanded(child: PageView.builder(itemBuilder: (context, index) => QuestionCard(),
+                ))
               ],
             ),
           ),
@@ -31,4 +62,6 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+
 

@@ -10,8 +10,8 @@ const List sample_data = [
   {
     "id": 1,
     "question":
-        "Flutter is an open-source UI software development kit created by ______",
-    "options": ['Apple', 'Google', 'Facebook', 'Microsoft'],
+        "A pessoa conhecida como O menino que estourou é: ______",
+    "options": ['João', 'Lucas', 'Melqui', 'Felipe'],
     "answer_index": 1,
   },
   {
