@@ -14,7 +14,6 @@ class QuestionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return Container(
       margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
       padding: EdgeInsets.all(kDefaultPadding),
@@ -32,7 +31,10 @@ class QuestionCard extends StatelessWidget {
           SizedBox(
             height: kDefaultPadding / 2,
           ),
-          ...List.generate(question.options.length, (index) => Option(text: question.options[index], index: index, press: () {}))
+          ...List.generate(
+              question.options.length,
+              (index) => Option(
+                  text: question.options[index], index: index, press: () {}))
         ],
       ),
     );
