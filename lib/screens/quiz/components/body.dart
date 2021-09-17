@@ -21,16 +21,19 @@ class Body extends StatelessWidget {
           fit: BoxFit.fill,
         ),
         SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                ProgressBar(),
-                SizedBox(
-                  height: kDefaultPadding,
-                ),
-                Text.rich(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                child: ProgressBar(),
+              ),
+              SizedBox(
+                height: kDefaultPadding,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                child: Text.rich(
                   TextSpan(
                       text: "Questão 1",
                       style: Theme.of(context)
@@ -46,16 +49,16 @@ class Body extends StatelessWidget {
                                 .copyWith(color: kSecondaryColor))
                       ]),
                 ),
-                Divider(
-                  thickness: 1.5,
-                ),
-                SizedBox(
-                  height: kDefaultPadding,
-                ),
-                Expanded(child: PageView.builder(itemBuilder: (context, index) => QuestionCard(),
-                ))
-              ],
-            ),
+              ),
+              Divider(
+                thickness: 1.5,
+              ),
+              SizedBox(
+                height: kDefaultPadding,
+              ),
+              Expanded(child: PageView.builder(itemBuilder: (context, index) => QuestionCard(),
+              ))
+            ],
           ),
         )
       ],
