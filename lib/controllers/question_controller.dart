@@ -16,7 +16,7 @@ class QuestionController extends GetxController
           answer: question['answer_index']))
       .toList();
 
-  List<Question> get questions => this.questions;
+  List<Question> get questions => this._questions;
 
   @override
   void onInit() {

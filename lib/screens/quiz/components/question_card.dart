@@ -7,30 +7,32 @@ import '../../../constants.dart';
 class QuestionCard extends StatelessWidget {
   const QuestionCard({
     Key key,
+    @required this.question,
   }) : super(key: key);
+
+  final Question question;
 
   @override
   Widget build(BuildContext context) {
+    
     return Container(
       margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
       padding: EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(25)),
+          color: Colors.white, borderRadius: BorderRadius.circular(25)),
       child: Column(
         children: [
           Text(
-            sample_data[0]['question'],
+            question.question,
             style: Theme.of(context)
                 .textTheme
                 .headline6
                 .copyWith(color: kBlackColor),
           ),
-          SizedBox(height: kDefaultPadding / 2,),
-          Option(),
-          Option(),
-          Option(),
-          Option(),
+          SizedBox(
+            height: kDefaultPadding / 2,
+          ),
+          ...List.generate(question.options.length, (index) => Option(text: question.options[index], index: index, press: () {}))
         ],
       ),
     );
