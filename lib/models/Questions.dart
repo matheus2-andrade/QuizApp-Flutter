@@ -16,20 +16,20 @@ const List sample_data = [
   },
   {
     "id": 2,
-    "question": "When google release Flutter.",
+    "question": "Quando a google lançou o flutter?",
     "options": ['Jun 2017', 'Jun 2017', 'May 2017', 'May 2018'],
     "answer_index": 2,
   },
   {
     "id": 3,
-    "question": "A memory location that holds a single letter or number.",
+    "question": "Um local de memória que contém uma única letra ou número.",
     "options": ['Double', 'Int', 'Char', 'Word'],
     "answer_index": 2,
   },
   {
     "id": 4,
-    "question": "What command do you use to output data to the screen?",
-    "options": ['Cin', 'Count>>', 'Cout', 'Output>>'],
+    "question": "Por que o computador foi preso?",
+    "options": ['Por roubo', 'Sonegou imposto', 'Executou um programa', 'Nenhuma'],
     "answer_index": 2,
   },
 ];
