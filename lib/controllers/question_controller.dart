@@ -1,8 +1,10 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:quiz_app/models/Questions.dart';
+import 'package:quiz_app/screens/score/score_screen.dart';
 
 class QuestionController extends GetxController
     with SingleGetTickerProviderMixin {
@@ -85,7 +87,11 @@ class QuestionController extends GetxController
       _animationController.reset();
 
       _animationController.forward().whenComplete(nextQuestion);
+    }else{
+      Get.to(ScoreScreen());
     }
+
+    
   }
 
   void updateTheQnNum(int index) {
