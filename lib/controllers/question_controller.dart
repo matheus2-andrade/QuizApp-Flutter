@@ -31,7 +31,7 @@ class QuestionController extends GetxController
   RxInt _questionNumber = 1.obs;
   RxInt get questionNumber => this._questionNumber;
 
-  int _numOfCorrectAns;
+  int _numOfCorrectAns = 0;
   int get numOfCorrectAns => this._numOfCorrectAns;
 
   @override
