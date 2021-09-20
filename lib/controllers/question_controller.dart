@@ -32,7 +32,7 @@ class QuestionController extends GetxController
   RxInt get questionNumber => this._questionNumber;
 
   int _numOfCorrectAns;
-  int get numOfCorrectAns => this._correctAns;
+  int get numOfCorrectAns => this._numOfCorrectAns;
 
   @override
   void onInit() {
@@ -55,5 +55,6 @@ class QuestionController extends GetxController
     if (_correctAns == _selectedAns) _numOfCorrectAns++;
 
     _animationController.stop();
+    update();
   }
 }
