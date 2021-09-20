@@ -63,6 +63,8 @@ class Body extends StatelessWidget {
               ),
               Expanded(
                   child: PageView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                controller: _questionController.pageController,
                 itemCount: _questionController.questions.length,
                 itemBuilder: (context, index) => QuestionCard(
                     question: _questionController.questions[index]),
